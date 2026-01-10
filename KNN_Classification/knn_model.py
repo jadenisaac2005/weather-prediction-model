@@ -9,9 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report
 # 1. Load  dataset
 # Get the path of the folder where THIS script is saved
 base_dir = os.path.dirname(os.path.abspath(__file__))
-# Build the path to the dataset relative to the script location
 csv_path = os.path.join(base_dir, '..', 'dataset', 'Bangalore_1990_2022_BangaloreCity.csv')
-# Load the file
 df = pd.read_csv(csv_path)
 
 # 2. Preprocessing: Handle missing values and create categorical label
@@ -29,7 +27,7 @@ X_scaled = scaler.fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
 # 5. Run k-NN
-knn = KNeighborsClassifier(n_neighbors=5) # K=5 is standard
+knn = KNeighborsClassifier(n_neighbors=28) # K=5 is standard
 knn.fit(X_train, y_train)
 
 # Output Results
