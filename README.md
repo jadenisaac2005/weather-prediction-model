@@ -1,137 +1,139 @@
-Weather Prediction Model
+<div align="center">
 
-Using K-Nearest Neighbors (KNN) and Multiple Linear Regression
+# 🌦️ Weather Prediction Model  
+### 📊 Using K-Nearest Neighbors (KNN) & Multiple Linear Regression  
 
-1. Introduction
-1.1 Project Overview
+📍 Bangalore Weather Data (1990–2022)  
+🧠 Machine Learning • Classification & Regression
 
-Weather prediction is an important application of data science with real-world relevance in
-agriculture, transportation, disaster management, and urban planning.
+</div>
 
-This project analyzes historical weather data from Bangalore city (1990–2022) and applies
-machine learning techniques to predict weather conditions.
-The dataset consists of approximately 12,000 daily observations.
+---
 
-Two supervised learning algorithms are used:
+## 📖 Overview
+This project applies **machine learning techniques** to historical weather data to predict
+rainfall occurrence and temperature trends.  
+The dataset contains approximately **12,000 daily weather records** collected from Bangalore city.
 
-K-Nearest Neighbors (KNN) for rainfall classification
+---
 
-Multiple Linear Regression for temperature prediction
+## 🎯 Objectives
+- 🌧️ Classify rainfall occurrence using **KNN**
+- 🌡️ Predict maximum temperature using **Linear Regression**
+- 📊 Analyze historical climate patterns
 
-1.2 The Algorithm: K-Nearest Neighbors (KNN)
+---
 
-KNN is a supervised, instance-based learning algorithm that classifies data points based on the
-majority class among their nearest neighbors.
-It is effective for problems where decision boundaries are non-linear and sufficient historical
-data is available.
+## 📊 Dataset Information
+- **Location:** Bangalore City  
+- **Time Period:** 1990 – 2022  
+- **Records:** ~12,000  
+- **Format:** CSV  
 
-1.3 The Algorithm: Multiple Linear Regression
+### Features Used
+- `tavg` – Average temperature  
+- `tmin` – Minimum temperature  
+- `tmax` – Maximum temperature  
+- `prcp` – Precipitation  
 
-Multiple Linear Regression models the relationship between a dependent variable and multiple
-independent variables.
-It is used in this project to predict maximum temperature based on other weather attributes.
+---
 
-1.4 Similarity Metric
+## 🧠 Algorithms Used
 
-Distance and similarity metrics are used to measure how close data points are in a
-multidimensional feature space.
-Although Euclidean distance is used in implementation, cosine similarity is conceptually relevant
-for understanding vector-based comparisons.
+### 🔹 K-Nearest Neighbors (KNN)
+- Supervised classification algorithm  
+- Classifies rainfall based on similarity to historical data  
+- Distance-based and non-parametric  
 
-2. Implementation Details & Code
-2.1 Importing Libraries
+**Why KNN?**
+- Handles non-linear patterns well  
+- Simple and intuitive  
+- Effective with large datasets  
 
-The project is implemented in Python using the following libraries:
+---
 
-Pandas for data manipulation
+### 🔹 Multiple Linear Regression
+- Supervised regression algorithm  
+- Predicts continuous temperature values  
+- Models linear relationships between variables  
 
-NumPy for numerical computation (used internally)
+**Why Linear Regression?**
+- Easy to interpret  
+- Computationally efficient  
+- Provides insight into feature influence  
 
-Scikit-learn for machine learning models
+---
 
-OS module for file and path handling
+## 🛠️ Tools & Technologies
+- **Python 🐍**
+- **Pandas** – Data manipulation  
+- **NumPy** – Numerical computation  
+- **Scikit-learn** – Machine learning models  
+- **OS Module** – File and path handling  
 
-2.2 Loading the Dataset
+---
 
-The dataset is stored in CSV format and loaded using Pandas.
-Each row represents a single day, and each column represents a weather attribute such as
-temperature or precipitation.
+## 🧹 Data Preprocessing
+- Removed rows with missing values  
+- Converted precipitation into binary rainfall labels  
+- Applied feature scaling for KNN  
+- Split data into training and testing sets (80/20)
 
-2.3 Matrix Creation (Data Preprocessing)
+---
 
-Data preprocessing ensures the quality of input data:
+## 🤖 Model Training
 
-Rows with missing values are removed
+### 🌧️ Rainfall Prediction (KNN)
+- Uses temperature features  
+- Applies standardization  
+- Classifies rainfall occurrence  
 
-Precipitation values are converted into a binary rainfall label
+---
 
-Data is split into training and testing sets
+### 🌡️ Temperature Prediction (Linear Regression)
+- Uses temperature and precipitation features  
+- Learns linear relationships  
+- Predicts maximum daily temperature  
 
-2.4 Model Training (KNN)
+---
 
-The KNN model is trained to classify whether rainfall occurs on a given day.
+## ⚙️ System Workflow
+1️⃣ Load dataset  
+2️⃣ Preprocess data  
+3️⃣ Train KNN and Linear Regression models  
+4️⃣ Perform predictions  
 
-Key steps include:
+---
 
-Selecting temperature-related features
+## 📤 Output
+🚫 Output and evaluation metrics are intentionally excluded as per project requirements.
 
-Applying feature standardization
+---
 
-Training the model using nearest-neighbor distance calculations
+## 📈 Results & Observations
+- KNN effectively captures rainfall patterns  
+- Linear Regression models temperature trends accurately  
 
-2.5 Model Training (Multiple Linear Regression)
+---
 
-The Multiple Linear Regression model is trained to predict maximum daily temperature.
+## 🏁 Conclusion
+This project demonstrates how **machine learning models** can be applied to real-world weather
+data for both **classification and regression tasks**.
 
-Key steps include:
+The combined approach provides a comprehensive framework for climate analysis.
 
-Selecting relevant temperature and precipitation features
+---
 
-Learning linear relationships between variables
+## 🗂️ Project Structure
 
-Estimating regression coefficients for interpretation
-
-2.6 System Execution
-
-The system executes the following steps sequentially:
-
-Data loading
-
-Data preprocessing
-
-Model training
-
-Prediction
-
-This modular structure ensures reproducibility and clarity.
-
-3. Output
-
-The output and evaluation metrics are intentionally excluded as per project requirements.
-
-4. Results and Findings
-
-The models demonstrate the effectiveness of machine learning techniques in weather prediction.
-
-KNN captures rainfall-related patterns using historical similarity
-
-Linear Regression effectively models temperature relationships
-
-5. Conclusion
-
-This project demonstrates how supervised machine learning algorithms can be applied to real-world
-weather data.
-
-By combining classification (KNN) and regression (Linear Regression), the system provides a
-comprehensive framework for analyzing climatic trends.
-
-Future improvements may include advanced models, additional features, and time-series forecasting
-methods.
-
-Project Structure
 Weather-Prediction-Model/
 │
-├── dataset
+├── dataset/
+│   └── Bangalore_1990_2022_BangaloreCity.csv
 ├── knn_model.py
 ├── linear_regression_model.py
 └── README.md
+
+<div align="center">
+
+</div>
